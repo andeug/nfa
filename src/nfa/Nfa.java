@@ -49,17 +49,17 @@ public class Nfa {
     
     public static int inputRead(int rollno){
         
-         if (rollno==20){
-             amount=amount+rollno;
-         return state++;
-   }else if(rollno==40){
-       //go to state 2
-       amount=amount+rollno;
-       return state+=2;
-   
-    }else{
-       return 5;
-   }
+      switch (rollno) {
+          case 20:
+              amount=amount+rollno;
+              return state++;
+          case 40:
+              //go to state 2
+              amount=amount+rollno;
+              return state+=2;
+          default:
+              return 5;
+      }
         
          }
      
